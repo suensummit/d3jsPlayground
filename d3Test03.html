@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+
+hihihi
+<p>+ <a href="./index.html" class="link"> back </a></p>
+<svg></svg>
+
+<script type="text/javascript" src="d3.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+
+var data = [3,1,4,1,5,9,2,6,5,3,5,8];
+root = {children: data.map(function(d) { return {value: d};})};
+nodes = d3.layout.pack().size([900,500]).nodes(root);
+nodes = nodes.filter(function(d) { return d.parent; });
+
+v1 = d3.select("svg").selectAll("circle").data(nodes);
+c1 = d3.scale.category20();
+v1.enter().append("circle");
+d3.select("svg").selectAll("circle").attr({
+	cx: function(d) { return d.x; },
+    cy: function(d) { return d.y; },
+    r:  function(d) { return d.r; },
+    stroke: "#000",
+    fill: function(d) { return c1(d.r); }
+})
+
+v2 = d3.select("svg").selectAll("text").data(nodes);
+v2.enter().append("text");
+d3.select("svg").selectAll("text").attr({
+	x: function(d) { return d.x; },
+    y: function(d) { return d.y; },
+    fill: "#000",
+    "font-size": "40",
+    "text-anchor": "middle",
+    "dominant-baseline": "central"
+}).text(function(d) { return d.value; });
+
+</script>
+
+</html>
