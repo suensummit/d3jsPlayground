@@ -1,0 +1,19 @@
+d3.select("body")
+  .attr("class", "root")
+
+d3.select("body")
+  .style({
+  backgroud: #999,
+  color: "#099"
+  })
+
+d3.selct("body")
+   .text("123")
+
+d3.selct("body").selectAll("div")
+  .style({
+  backgroud: function(){
+  return "#f00"
+  },
+  color: "#009"
+  })
