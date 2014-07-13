@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+hi
+<p>+ <a href="./index.html" class="link"> back </a></p>
+<svg></svg>
+
+<script type="text/javascript" src="d3.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+var data = [3,1,4,1,5,9,2,6,5,3,5,8,9,7,9];
+var selection = d3.select("svg").selectAll("circle").data(data);
+selection.enter().append("circle").attr("class","e3");
+d3.select("svg").selectAll("circle.e3").attr({
+	cx: function(d, i) {return i * 60 + 40;},
+	cy: 100,
+	r: function(d, i) {return d * 10;},
+	fill: function(d, i) {return "rgba(" +(d*30)+ ",128,192,0.5)";}
+})
+</script>
+
+</html>
