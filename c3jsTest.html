@@ -14,18 +14,44 @@
 
 var chart = c3.generate({
     data: {
-        json: {},
-        //type : 'pie',
-        //onclick: function (d, i) { console.log("onclick", d, i); },
-        //onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-        //onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+        x: 'x',
+        json: {
+            x: ['www.site1.com', 'www.site2.com', 'www.site3.com', 'www.site4.com', 'www.site5.com', 'www.site6.com'],
+            download: [30, 200, 100, 400],
+            loading: [90, 100, 140, 200],
+        },
+        groups: [
+            ['download', 'loading']
+        ],
+    },
+    axis: {
+        x: {type: 'category'}
+    },
+});
+/*
+var chart = c3.generate({
+    data: {
+        x: 'x',
+        json: {
+            x: ['2013-01-01', '2013-01-02', '2013-01-03', '2013-01-04', '2013-01-05', '2013-01-06'],
+            data1: [30, 200, 100, 400, 150, 250],
+            data2: [130, 340, 200, 500, 250, 350]
+        }
+    },
+    axis: {
+        x: {
+            type: 'timeseries',
+            tick: {format: '%Y-%m-%d'}
+        }
     }
 });
+*/
+setTimeout(function () {
+    chart.transform('bar')
+}, 1000);
 
 setTimeout(function () {
     chart.load({
-        x: 'data3',
-        // iris data from R
         json: {
             data1: [30, 20, 50, 40, 60, 50],
             data2: [220, 130, 90, 240, 130, 220],
@@ -33,7 +59,22 @@ setTimeout(function () {
             data4: [15, 25, 35, 45, 55, 65],
         },
     });
-}, 1500);
+}, 2000);
+
+setTimeout(function () {
+    chart.load({
+        json: [
+            {name: 'www.site1.com', upload: 800, download: 500, total: 400},
+            {name: 'www.site2.com', upload: 600, download: 600, total: 400},
+            {name: 'www.site3.com', upload: 400, download: 800, total: 500},
+            {name: 'www.site4.com', upload: 400, download: 700, total: 500},
+        ],
+        keys: {
+            value: ['upload', 'download'],
+        }
+    });
+}, 3000);
+
 
 setTimeout(function () {
     chart.load({
@@ -74,6 +115,10 @@ setTimeout(function () {
 setTimeout(function () {
     chart.transform('area', 'virginica')
 }, 8000);
+
+//setTimeout(function () {
+//    chart.transform('pie')
+//}, 9000);
 
 </script>
 
