@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+body{
+	width:1200px;
+	margin:100px auto;
+}
+svg text{
+	font-size:15px;
+    font-family: Heiti TC;
+}
+rect{
+	shape-rendering:crispEdges;
+}
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="bip.js"></script>
+<script>
+var in_data=[
+
+['24hr_delivery   ','cat1',37718],
+['anniversary     ','cat1',32290],
+['limit_time_offer','cat1',25565],
+['special_offer   ','cat1',22278],
+['group_bargaining','cat1',29446],
+['latest_release  ','cat1',14608],
+['others       	  ','cat1',7509 ],
+
+['24hr_delivery   ','cat2',37218],
+['anniversary     ','cat2',32890],
+['limit_time_offer','cat2',21565],
+['special_offer   ','cat2',12278],
+['group_bargaining','cat2',49446],
+['latest_release  ','cat2',14708],
+['others       	  ','cat2',1509 ],
+
+['24hr_delivery   ','cat3',57718],
+['anniversary     ','cat3',32290],
+['limit_time_offer','cat3',55565],
+['special_offer   ','cat3',22278],
+['group_bargaining','cat3',79446],
+['latest_release  ','cat3',24608],
+['others       	  ','cat3',7509 ],
+
+];
+
+var out_data=[
+
+['Yahoo    ','訂單數量',590],
+['Facebook ','訂單數量',486],
+['Google   ','訂單數量',244],
+['Mobile01 ','訂單數量',563],
+['FindPrice','訂單數量',644],
+['Twitter  ','訂單數量',210],
+['Pixnet   ','訂單數量',620],
+['PTT      ','訂單數量',199],
+
+['Yahoo    ','購買數量',944],
+['Facebook ','購買數量',948],
+['Google   ','購買數量',953],
+['Mobile01 ','購買數量',1000],
+['FindPrice','購買數量',582],
+['Twitter  ','購買數量',868],
+['Pixnet   ','購買數量',667],
+['PTT      ','購買數量',643],
+
+['Yahoo    ','購買金額(千元)',1383],
+['Facebook ','購買金額(千元)',1725],
+['Google   ','購買金額(千元)',1569],
+['Mobile01 ','購買金額(千元)',995 ],
+['FindPrice','購買金額(千元)',2426],
+['Twitter  ','購買金額(千元)',786 ],
+['Pixnet   ','購買金額(千元)',801 ],
+['PTT      ','購買金額(千元)',1996],
+
+];
+
+var width = 800, height = 610, margin ={b:0, t:40, l:170, r:50};
+
+var svg = d3.select("body")
+	.append("svg").attr('width',width).attr('height',(height+margin.b+margin.t))
+	.append("g").attr("transform","translate("+ margin.l+","+margin.t+")");
+
+var svg2 = d3.select("body")
+	.append("svg").attr('width',width).attr('height',(height+margin.b+margin.t))
+	.append("g").attr("transform","translate("+ margin.l+","+margin.t+")");
+    
+var data = [ 
+    {data:bP.partData(in_data,2), id:'PV', header:["Banner","Catergory","PV"]},
+];
+var data2 = [ 
+	{data:bP.partData(out_data,2), id:'PreDomain', header:["來源","Value","PreDomain"]},
+];
+
+bP.draw(data, svg);
+bP.draw(data2, svg2);
+
+</script>
+</body>
