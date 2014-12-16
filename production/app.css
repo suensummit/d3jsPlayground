@@ -25,14 +25,14 @@ svg {
 
 .area.outer,
 .legend .outer {
-  fill: rgba(102, 178, 255, 0.8);
-  stroke: rgba(77, 165, 255, 0.8);
+  fill: rgba(230, 226, 175, 0.8);
+  stroke: rgba(230, 246, 175, 0.8);
 }
 
 .area.inner,
 .legend .inner {
-  fill: rgba(25, 140, 255, 0.8);
-  stroke: rgba(20, 112, 204, 0.8);
+  fill: rgba(167, 163, 126, 0.8);
+  stroke: rgba(167, 183, 126, 0.8);
 }
 
 .median-line,
@@ -49,15 +49,15 @@ svg {
 
 .marker.全館促銷 .marker-bg,
 .marker.全館促銷 path {
-  fill: rgba(255, 127, 0, 0.8);
-  stroke: rgba(255, 127, 0, 0.8);
+  fill: rgba(4, 99, 128, 0.8);
+  stroke: rgba(4, 99, 128, 0.8);
   stroke-width: 3;
 }
 
 .marker.週年慶 .marker-bg,
 .marker.週年慶 path {
-  fill: rgba(0, 153, 51, 0.8);
-  stroke: rgba(0, 153, 51, 0.8);
+  fill: rgba(255, 151, 79, 0.8);
+  stroke: rgba(255, 151, 79, 0.8);
   stroke-width: 3;
 }
 
