@@ -17,7 +17,7 @@ var colors = {
   "cart": "#3399ff",
   "account": "#4ca6ff",
   "other": "#66b2ff",
-  "order": "#1470cc",
+  "ordered": "#1470cc",
   "end": "#bbbbbb"
 };
 
