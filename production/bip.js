@@ -4,8 +4,10 @@
 //	var c1=[-130, 40], c2=[-50, 100], c3=[-10, 140];
     var c1=[-130, 60], c2=[-10, 270], c3=[-10, 280];
     //Column positions of labels.
-	var colors =["#3366CC", "#DC3912",  "#FF9900","#109618", "#990099", "#87C3C7","#FF69B4", "#F7BD34 ","#7C845D", "#9370DB" ];
-	
+	//var colors =["#3366CC", "#DC3912",  "#FF9900","#109618", "#990099", "#87C3C7","#FF69B4", "#F7BD34 ","#7C845D", "#9370DB" ];
+	//var colors = ["#3366FF", "#366EFF", "#3875FF", "#3B7DFF", "#3D85FF", "#408CFF", "#4294FF", "#459CFF", "#47A3FF", "#4AABFF", "#4CB2FF", "#4FBAFF", "#52C2FF", "#54C9FF", "#57D1FF", "#59D9FF", "#5CE0FF", "#5EE8FF", "#61F0FF", "#63F7FF", "#66FFFF"];
+	var colors = ["#0066cc", "#0073e5", "#007fff", "#198cff", "#3399ff", "#4ca6ff", "#66b2ff", "#80bfff", "#99ccff", "#b3d9ff"];
+
 	bP.partData = function(data,p){
 		var sData={};
 		
@@ -132,7 +134,7 @@
 			
 		mainbar.append("text").attr("class","barpercent")
 			.attr("x", c3[p]).attr("y",function(d){ return d.middle+5;})
-			//.text(function(d,i){ return "( "+Math.round(100*d.percent)+"%)" ;})
+			.text(function(d,i){ return "( "+Math.round(100*d.percent)+"%)" ;})
 			.attr("text-anchor","end").style("fill","grey");
 			
 		d3.select("#"+id).select(".part"+p).select(".subbars")
