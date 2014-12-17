@@ -6,7 +6,8 @@
     //Column positions of labels.
 	//var colors =["#3366CC", "#DC3912",  "#FF9900","#109618", "#990099", "#87C3C7","#FF69B4", "#F7BD34 ","#7C845D", "#9370DB" ];
 	//var colors = ["#0066cc", "#0073e5", "#007fff", "#198cff", "#3399ff", "#4ca6ff", "#66b2ff", "#80bfff", "#99ccff", "#b3d9ff"];
-	var colors = ["#E6E2AF", "#A7A37E", "#EFECCA", "#046380", "#002F2F", "#405952", "#9C9B7A", "#FFD393", "#FF974F", "#F54F29"];
+	//var colors = ["#E6E2AF", "#A7A37E", "#EFECCA", "#046380", "#002F2F", "#405952", "#9C9B7A", "#FFD393", "#FF974F", "#F54F29"];
+	var colors = ["#405952", "#9C9B7A", "#FFD393", "#FF974F", "#F54F29", "#E6E2AF", "#046380", "#002F2F", "#9383A7", "#C0C0B0", "#FAFBF7", "#C19469", "#CF4F43"];
 
 	bP.partData = function(data,p){
 		var sData={};
