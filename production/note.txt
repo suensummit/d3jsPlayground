@@ -1,0 +1,8 @@
+scp ~/Documents/d3jsPlayground/production/sequences.js root@192.168.60.250:/opt/etu-recommender/MgtConsole/admin/EI/1.0/javascripts/sequences.js
+
+scp ~/Documents/d3jsPlayground/production/sequences.css root@192.168.60.250:/opt/etu-recommender/MgtConsole/admin/EI/1.0/stylesheets/sequences.css
+
+scp ~/Documents/d3jsPlayground/production/visit-sequences.csv root@192.168.60.250:/opt/etu-recommender/MgtConsole/admin/EI/1.0/visit-sequences.csv
+
+/opt/etu-recommender/MgtConsole/WEB-INF/pages/EI/funnelOverview.jsp
+
