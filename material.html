@@ -1,21 +1,46 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <!--script type="text/javascript" src="d3.min.js" charset="utf-8"></script-->
-  <!--script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
-  <link rel="stylesheet" href="material.css">
+	<meta charset="UTF-8">
+	<title>純 CSS Material Design 風格按鈕 - demo1</title>
+	<style>
+	body{
+	  background:#fff;
+	}
+	.a{
+	  position:absolute;
+	  width:0;
+	  height:0;
+	  border-width:50px;
+	  border-style:solid;
+	  border-color:#c00 ;
+	  transition:1s;
+	}
+	.b{
+	  position:absolute;
+	  left:120px;
+	  width:100px;
+	  height:0;
+	  background:#069;
+	  border-width:0 0 100px 0;
+	  border-style:solid;
+	  border-color:#fff #fff #069 #fff ;
+	  transition:1s;
+	}
+	.a:hover{
+	  border-color:#fff #fff #c00 #fff ;
+	}
+	.b:hover{
+	  border-width:50px;
+	  background:#069;
+	  border-color:#fff #fff #069 #fff ;
+	  width:0;
+	  height:0;
+	}
+	</style>
 </head>
 <body>
-  <!-- Hard-code Circle -->
-  <!--svg id="chart" width="600" height="600"></svg-->
-
-  <!-- RWD Circle -->
-  <div>
-    <svg id="chart" viewBox="0 0 600 600"></svg>
-  </div>
-  <script src="material.js" charset="utf-8"></script>
-
+	<div class="a"></div>
+  <div class="b"></div>
 </body>
 </html>
