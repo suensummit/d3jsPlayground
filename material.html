@@ -9,7 +9,7 @@
 	}
 	.a{
 	  position:absolute;
-	  width:0;
+	  width: 0;
 	  height:0;
 	  border-width:50px;
 	  border-style:solid;
@@ -19,28 +19,50 @@
 	.b{
 	  position:absolute;
 	  left:120px;
-	  width:100px;
-	  height:0;
+	  width:0px;
+	  height:100px;
 	  background:#069;
-	  border-width:0 0 100px 0;
+	  border-width:0 100px 0 0;
 	  border-style:solid;
-	  border-color:#fff #fff #069 #fff ;
+	  border-color:#fff #069 #fff #fff ;
 	  transition:1s;
 	}
 	.a:hover{
-	  border-color:#fff #fff #c00 #fff ;
+	  border-color:#095 #fff #c00 #fff ;
 	}
 	.b:hover{
 	  border-width:50px;
 	  background:#069;
-	  border-color:#fff #fff #069 #fff ;
+	  border-color:#069 #069 #069 #095;
 	  width:0;
 	  height:0;
 	}
+  .c{
+    position:relative;
+    top:120px;
+    width:0;
+    height:0;
+    border-width:0 81px 59px;
+    border-style:solid;
+    border-color:transparent transparent #095;
+  }
+  .c:before{
+    position:absolute;
+    content:"";
+    top:59px;
+    left:-81px;
+    width:100px;
+    height:0;
+    background:none;
+    border-width:95px 31px 0;
+    border-style:solid;
+    border-color:#095 transparent transparent;
+  }
 	</style>
 </head>
 <body>
 	<div class="a"></div>
   <div class="b"></div>
+  <div class="c"></div>
 </body>
 </html>
