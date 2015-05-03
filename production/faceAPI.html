@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JSSample</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    $(function() {
+        var params = {
+            // Specify your subscription key
+            'subscription-key': '2ff62f69386c4ba39bdf3c938c9b3552',
+            // Specify values for optional parameters, as needed
+            // analyzesFaceLandmarks: "false",
+            // analyzesAge: "false",
+            // analyzesGender: "false",
+            // analyzesHeadPose: "false",
+        };
+
+        $.ajax({
+            url: 'https://api.projectoxford.ai/face/v0/detections?' + $.param(params),
+            type: 'POST',
+        })
+        .done(function(data) {
+            alert("success");
+        })
+        .fail(function() {
+            alert("error");
+        });
+    });
+</script>
+</body>
+</html>
